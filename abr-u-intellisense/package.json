@@ -1,0 +1,32 @@
+{
+  "name": "abr-u-intellisense",
+  "displayName": "ABR-U CSS IntelliSense",
+  "description": "Autocomplete and hover tooltips for ABR-U CSS classes.",
+  "version": "0.1.0",
+  "publisher": "dimy-osman",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": ["Other"],
+  "activationEvents": [
+    "onLanguage:html",
+    "onLanguage:javascript",
+    "onLanguage:typescript",
+    "onLanguage:javascriptreact",
+    "onLanguage:typescriptreact"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {},
+  "scripts": {
+    "compile": "tsc -p .",
+    "watch": "tsc -watch -p .",
+    "generate": "node scripts/generateClassData.js",
+    "build": "npm run generate && npm run compile"
+  },
+  "devDependencies": {
+    "@types/node": "^20.5.0",
+    "@types/vscode": "^1.80.0",
+    "typescript": "^5.4.0"
+  }
+}
+
