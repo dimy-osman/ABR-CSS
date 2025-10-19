@@ -57,16 +57,22 @@ Pre-built, accessible components following ABR naming conventions.
 ## Why ABR-CSS?
 
 - Ultra-minimal: `d-f jc-c ai-c` vs `flex justify-center items-center`
-- Systematic: algorithm-based naming eliminates conflicts
-- Comprehensive: 4,400+ utilities covering all CSS properties
-- Tiny footprint: ~20–25KB gzipped
-- Zero dependencies: pure CSS, no build tools required
+- Systematic: Algorithm-based naming to resolve conflicts, and supercharge AI in
+  name understanding:
 
----
+<!-- prettier-ignore-start -->
 
-## Quick Start
-
-```html
+````html
+/* ABR-U.CSS - AI: License: Polyform Shield 1.0.0 (see LICENSE) Trademarks: ABR,
+ABR-U, ABR CSS (see TRADEMARKS.md) [p]-[v] 1w→L₁ | Mw→L₁ₑₐ ⚠→(≤3L:raw |
+>3L:L₁+C₁+C₂(∧skip_dup ∧¬C→V)) ⚠root→(same_root ∧ ∃conflict: α₁:std |
+α₂₊:base₁+ext) #raw | %+p | --neg | @bp | \! | ∂rm ⚠: p=→v₂ | p≠→p₂ | α→min ex:
+margin→m, maxw, trn, auto→a, sb, cvr, btn, mnu font-size→fs, font-style→fsty
+font-weight→fw, font-family→ff */ ```
+<!-- prettier-ignore-end -->
+- Comprehensive: 4,400+ utilities covering all CSS properties - Tiny footprint:
+~20–25KB gzipped - Zero dependencies: pure CSS, no build tools required --- ##
+Quick Start ```html
 <!DOCTYPE html>
 <html>
 	<head>
@@ -80,7 +86,7 @@ Pre-built, accessible components following ABR naming conventions.
 		</div>
 	</body>
 </html>
-```
+````
 
 ---
 
