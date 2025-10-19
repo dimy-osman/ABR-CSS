@@ -36,7 +36,7 @@ CDN (Specific Version):
 ```html
 <link
 	rel="stylesheet"
-	href="https://cdn.jsdelivr.net/gh/dimy-osman/ABR-CSS@v0.1.1/ABR-U/ABR-U.min.css" />
+	href="https://cdn.jsdelivr.net/gh/dimy-osman/ABR-CSS@v0.2.0/ABR-U/ABR-U.min.css" />
 ```
 
 Docs: see `ABR-U/ABR-U.md`.
