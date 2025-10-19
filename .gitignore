@@ -8,6 +8,7 @@ node_modules/
 *.vsix
 out/
 dist/
+ABR-C/
 
 # OS files
 .DS_Store
