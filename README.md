@@ -51,9 +51,9 @@ ABR.CSS is built for **speed**, **clarity**, and **minimalism** — not bloated 
 **Framework-Free Flexibility** — Works in any environment: static HTML, WordPress, Bricks, Pinegrow, or full-stack apps — no build tools needed.
 
 ```html
-<div class="d-f fd-c ai-c jc-c gap-1 p-2 bc-gry900 c-wht h-100vh">
+<div class="d-f fd-c ai-c jc-c g-l p-2 bc-gry900 c-wht h-100vh">
   <h1 class="fs-2xl fw-700">ABR.CSS</h1>
-  <p class="fs-md op-.8">Ultra-minimal utility CSS for humans and AI.</p>
+  <p class="fs-m opc-0.75">Ultra-minimal utility CSS for humans and AI.</p>
 </div>
 ```
 
@@ -261,7 +261,7 @@ export default defineNuxtConfig({
 
 **Or in Vue SFC `<template>`:**
 
-```vue
+```html
 <script setup>
 import { useHead } from '@vueuse/head';
 
@@ -332,9 +332,9 @@ useHead({
 <body class="bc-gry100">
     <header class="d-f jc-sb ai-c p-1.5 bc-wht shd-sm">
         <h1 class="fs-xl fw-700">My App</h1>
-        <nav class="d-f gap-.5">
-            <a href="#" class="p-.5_1 c-blu600 td-n">Home</a>
-            <a href="#" class="p-.5_1 c-blu600 td-n">About</a>
+        <nav class="d-f g-m">
+            <a href="#" class="pt-s pr-m pb-s pl-m c-blu600 td-n">Home</a>
+            <a href="#" class="pt-s pr-m pb-s pl-m c-blu600 td-n">About</a>
         </nav>
     </header>
     
@@ -342,7 +342,7 @@ useHead({
         <div class="ta-c">
             <h2 class="fs-3xl fw-700 mb-1">Welcome to ABR-CSS</h2>
             <p class="fs-lg c-gry600 mb-2">Ultra-minimal, AI-optimized utility CSS</p>
-            <button class="p-.75_2 bc-blu600 c-wht fw-600 br-.5 cur-p">Get Started</button>
+            <button class="pt-m pr-l pb-m pl-l bc-blu600 c-wht fw-600 br-.5 crs-p">Get Started</button>
         </div>
     </main>
 </body>
@@ -381,9 +381,10 @@ git push && git push --tags
 - [x] CDN via jsDelivr
 - [x] Responsive breakpoints (xs, s, m, l, xl)
 - [x] VS Code extension (autocomplete)
+- [x] Framework integrations (React, Vue, Svelte)
 - [ ] ABR-C — Component library
 - [ ] Interactive docs site
-- [ ] Framework integrations (React, Vue, Svelte)
+
 
 ---
 
