@@ -17,6 +17,9 @@ pnpm-lock.yaml
 *.min.css
 *.min.js
 
+# README with special formatting
+README.md
+
 # Git
 .git/
 
