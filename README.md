@@ -1,8 +1,6 @@
 # ABR-CSS
 
-[![GitHub tag](https://img.shields.io/github/v/tag/dimy-osman/ABR-CSS?label=version&sort=semver)](https://github.com/dimy-osman/ABR-CSS/tags)
-[![jsDelivr hits](https://img.shields.io/jsdelivr/gh/hm/dimy-osman/ABR-CSS)](https://www.jsdelivr.com/package/gh/dimy-osman/ABR-CSS)
-[![GitHub stars](https://img.shields.io/github/stars/dimy-osman/ABR-CSS?style=flat)](https://github.com/dimy-osman/ABR-CSS/stargazers)
+[![GitHub release](https://img.shields.io/github/v/release/dimy-osman/ABR-CSS?sort=semver&display_name=tag)](https://github.com/dimy-osman/ABR-CSS/releases)
 [![License](https://img.shields.io/badge/license-Polyform%20Shield-blue)](LICENSE)
 
 **Abbreviated CSS Framework** — ultra-minimal, systematic, conflict-free utility
