@@ -2,8 +2,13 @@
 
 [![Sponsor](https://img.shields.io/badge/Sponsor-ABR.CSS-FFD140?logo=paypal&logoColor=003087)](https://www.paypal.com/ncp/payment/MWHX2FHZ9RY8J)
 
-Abbreviated CSS Framework — ultra-minimal, systematic, conflict-free utility CSS
-with an algorithmic naming system, created specifically to accomodate fast and minimal typing, minimal cnd overload and minimal token usage in AI code generations. 
+**Abbreviated CSS Framework** — ultra-minimal, systematic, conflict-free utility CSS built specifically for **AI-powered coding**, **token efficiency**, and **maximum developer speed**.
+
+**Built for AI Coding:**
+- Minimize typing: `d-f jc-c ai-c` vs `display: flex; justify-content: center; align-items: center;`
+- Save tokens: Shorter class names = lower AI costs and faster responses
+- Optimize focus: Systematic naming eliminates decision fatigue
+- Speed-first: Write layouts 3x faster with intuitive abbreviations
 
 ## Modules
 

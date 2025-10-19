@@ -1,0 +1,19 @@
+# Temporary files
+Untitled-1.html
+
+# Node modules
+node_modules/
+
+# Build outputs
+*.vsix
+out/
+dist/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
