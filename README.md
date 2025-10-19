@@ -40,6 +40,27 @@ CSS built specifically for **AI-powered coding**, **token efficiency**, and
 
 ---
 
+## ⚡ Philosophy in 60 Seconds
+
+ABR.CSS is built for **speed**, **clarity**, and **minimalism** — not bloated configs or verbose class names.
+
+**Ultra-Minimal Syntax** — Every utility is reduced to its shortest readable form (`d-f`, `jc-c`, `g-2xl`), saving both code and AI tokens.
+
+**Predictable & Consistent** — No guessing. The same pattern applies everywhere: `property-value` with familiar abbreviations.
+
+**Framework-Free Flexibility** — Works in any environment: static HTML, WordPress, Bricks, Pinegrow, or full-stack apps — no build tools needed.
+
+```html
+<div class="d-f fd-c ai-c jc-c gap-1 p-2 bc-gry900 c-wht h-100vh">
+  <h1 class="fs-2xl fw-700">ABR.CSS</h1>
+  <p class="fs-md op-.8">Ultra-minimal utility CSS for humans and AI.</p>
+</div>
+```
+
+**ABR.CSS keeps your codebase — and your headspace — light.** Copy, paste, build, done.
+
+---
+
 ## Modules
 
 ### ABR-U — Utilities
