@@ -18,7 +18,10 @@ CSS built specifically for **AI-powered coding**, **token efficiency**, and
 
 Support ABR.CSS — a lightweight CSS framework made for AI-assisted development.
 (for coffee and AI tokens)
+
 [![Sponsor Development!](https://img.shields.io/badge/Sponsor-ABR.CSS-FFD140?logo=paypal&logoColor=003087)](https://www.paypal.com/ncp/payment/MWHX2FHZ9RY8J)
+
+Thank you!
 
 ## Modules
 
