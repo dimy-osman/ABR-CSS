@@ -1,7 +1,9 @@
 # ABR-CSS
 
+[![Sponsor](https://img.shields.io/badge/Sponsor-ABR.CSS-FFD140?logo=paypal&logoColor=003087)](https://www.paypal.com/ncp/payment/MWHX2FHZ9RY8J)
+
 Abbreviated CSS Framework — ultra-minimal, systematic, conflict-free utility CSS
-with an algorithmic naming system.
+with an algorithmic naming system, created specifically to accomodate fast and minimal typing, minimal cnd overload and minimal token usage in AI code generations. 
 
 ## Modules
 
@@ -139,8 +141,8 @@ git push && git push --tags
 - [x] ABR-U — Utility classes
 - [x] CDN via jsDelivr
 - [x] Responsive breakpoints (xs, s, m, l, xl)
+- [x] VS Code extension (autocomplete)
 - [ ] ABR-C — Component library
-- [ ] VS Code extension (autocomplete)
 - [ ] Interactive docs site
 - [ ] Framework integrations (React, Vue, Svelte)
 

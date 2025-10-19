@@ -4,6 +4,7 @@ node_modules/
 # Compiled output
 out/
 dist/
+archive/
 
 # VSCode extension packaging
 *.vsix

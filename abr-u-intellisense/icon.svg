@@ -1,0 +1,32 @@
+<svg width="128" height="128" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="128" height="128" rx="16" fill="#2563eb"/>
+  
+  <!-- ABR Text -->
+  <text 
+    x="64" 
+    y="80" 
+    font-family="Arial, sans-serif" 
+    font-size="48" 
+    font-weight="bold" 
+    fill="#ffffff" 
+    text-anchor="middle">ABR</text>
+  
+  <!-- CSS indicator dot -->
+  <circle cx="100" cy="28" r="8" fill="#10b981"/>
+</svg>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,10 +1,11 @@
 {
 	"name": "abr-u-intellisense",
 	"displayName": "ABR-U CSS IntelliSense",
-	"description": "Autocomplete and hover tooltips for ABR-U CSS classes.",
-	"version": "0.1.1",
+	"description": "Intelligent autocomplete and hover documentation for ABR-U CSS utility classes. Select multiple classes to preview combined CSS!",
+	"version": "1.6.4",
 	"publisher": "dimy-osman",
 	"license": "MIT",
+	"icon": "icon.png",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/dimy-osman/ABR-CSS.git"
@@ -24,14 +25,35 @@
 		"tailwind-alternative"
 	],
 	"activationEvents": [
-		"onLanguage:html",
-		"onLanguage:javascript",
-		"onLanguage:typescript",
-		"onLanguage:javascriptreact",
-		"onLanguage:typescriptreact"
+		"onStartupFinished"
 	],
 	"main": "./out/extension.js",
-	"contributes": {},
+	"contributes": {
+		"commands": [
+			{
+				"command": "abr-u-intellisense.test",
+				"title": "ABR-U: Test Extension"
+			}
+		],
+		"configuration": {
+			"title": "ABR-U IntelliSense",
+			"properties": {
+				"abr-u-intellisense.hoverMode": {
+					"type": "string",
+					"default": "selectionOnly",
+					"enum": [
+						"always",
+						"selectionOnly"
+					],
+					"enumDescriptions": [
+						"Show hover tooltips when hovering over any ABR-U class",
+						"Show hover tooltips only when text is selected (less disruptive)"
+					],
+					"description": "Controls when ABR-U hover tooltips appear"
+				}
+			}
+		}
+	},
 	"scripts": {
 		"compile": "tsc -p .",
 		"watch": "tsc -watch -p .",
