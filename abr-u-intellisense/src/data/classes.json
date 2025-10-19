@@ -4175,6 +4175,42 @@
     "css": "height: 100vh!important;",
     "description": "height: 100vh!important"
   },
+  "h-50%!": {
+    "css": "height: 50%!important;",
+    "description": "height: 50%!important"
+  },
+  "h-50dvh": {
+    "css": "height: 50dvh;",
+    "description": "height: 50dvh"
+  },
+  "h-50dvh!": {
+    "css": "height: 50dvh!important;",
+    "description": "height: 50dvh!important"
+  },
+  "h-50lvh": {
+    "css": "height: 50lvh;",
+    "description": "height: 50lvh"
+  },
+  "h-50lvh!": {
+    "css": "height: 50lvh!important;",
+    "description": "height: 50lvh!important"
+  },
+  "h-50svh": {
+    "css": "height: 50svh;",
+    "description": "height: 50svh"
+  },
+  "h-50svh!": {
+    "css": "height: 50svh!important;",
+    "description": "height: 50svh!important"
+  },
+  "h-50vh": {
+    "css": "height: 50vh;",
+    "description": "height: 50vh"
+  },
+  "h-50vh!": {
+    "css": "height: 50vh!important;",
+    "description": "height: 50vh!important"
+  },
   "h-17%": {
     "css": "height: 16.666667%;",
     "description": "height: 16.666667%"
@@ -4258,10 +4294,6 @@
   "h-50%": {
     "css": "height: 50%;",
     "description": "height: 50%"
-  },
-  "h-50%!": {
-    "css": "height: 50%!important;",
-    "description": "height: 50%!important"
   },
   "h-5xl": {
     "css": "height: var(--a-s-5xl);",

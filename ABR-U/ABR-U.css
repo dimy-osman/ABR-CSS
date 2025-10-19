@@ -1387,6 +1387,15 @@ ex: margin→m, maxw, trn, auto→a, sb, cvr, btn, mnu
 .h-100svh\!{height: 100svh!important;}
 .h-100vh{height: 100vh;}
 .h-100vh\!{height: 100vh!important;}
+.h-50\%\!{height: 50%!important;}
+.h-50dvh{height: 50dvh;}
+.h-50dvh\!{height: 50dvh!important;}
+.h-50lvh{height: 50lvh;}
+.h-50lvh\!{height: 50lvh!important;}
+.h-50svh{height: 50svh;}
+.h-50svh\!{height: 50svh!important;}
+.h-50vh{height: 50vh;}
+.h-50vh\!{height: 50vh!important;}
 .h-17\%{height: 16.666667%;}
 .h-17\%\!{height: 16.666667%!important;}
 .h-20\%{height: 20%;}
