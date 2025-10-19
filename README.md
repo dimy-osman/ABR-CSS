@@ -291,7 +291,7 @@ useHead({
 
 **In your layout `src/layouts/Layout.astro`:**
 
-```astro
+```html
 ---
 // Layout.astro
 ---
@@ -342,7 +342,7 @@ useHead({
         <div class="ta-c">
             <h2 class="fs-3xl fw-700 mb-1">Welcome to ABR-CSS</h2>
             <p class="fs-lg c-gry600 mb-2">Ultra-minimal, AI-optimized utility CSS</p>
-            <button class="pt-m pr-l pb-m pl-l bc-blu600 c-wht fw-600 br-.5 crs-p">Get Started</button>
+            <button class="pt-m pr-l pb-m pl-l bc-blu600 c-wht fw-600 brdr-m crs-p">Get Started</button>
         </div>
     </main>
 </body>
