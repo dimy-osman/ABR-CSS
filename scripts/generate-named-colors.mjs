@@ -47,7 +47,7 @@ function abbreviate(color) {
 		let abbr = word[0]; // First letter always included
 		let consonantCount = 0;
 		let prevChar = word[0];
-		let lastVowelBeforeConsonant = null;
+		let vowelsSinceLastConsonant = [];
 
 		// Collect up to 2 more consonants (skip consecutive duplicates)
 		for (let i = 1; i < word.length && consonantCount < 2; i++) {
@@ -60,25 +60,45 @@ function abbreviate(color) {
 				abbr += char;
 				consonantCount++;
 				prevChar = char;
+				// Don't clear, we want to remember vowels before this consonant
 			} else {
-				// Track the last vowel we encounter before getting consonants
-				lastVowelBeforeConsonant = char;
+				vowelsSinceLastConsonant.push(char);
 				prevChar = char;
 			}
 		}
 
-		// If we have less than 3 chars and we tracked a vowel, insert it before the last consonant
-		// This handles cases like "teal" -> t + e(drop) + a(keep) + l -> "tal"
-		if (abbr.length < 3 && lastVowelBeforeConsonant && consonantCount > 0) {
-			// Insert the last vowel before the last consonant
-			const lastChar = abbr[abbr.length - 1];
-			abbr = abbr.slice(0, -1) + lastVowelBeforeConsonant + lastChar;
-		}
-		// If still not 3 chars, pad with remaining letters
-		else if (abbr.length < 3) {
-			for (let i = 1; i < word.length && abbr.length < 3; i++) {
-				if (!abbr.includes(word[i])) {
-					abbr += word[i];
+		// If we have less than 3 chars and only found 1 consonant
+		// Insert the LAST vowel that came before that consonant
+		// Examples:
+		// - "teal" (t-e-a-l): t + l -> needs vowel -> insert 'a' (last before 'l') -> "tal"
+		// - "blue" (b-l-u-e): b + l -> needs vowel -> but vowels are AFTER l, so pad with 'u' -> "blu"
+		if (abbr.length < 3) {
+			// Try to get vowels that appeared between L1 and the last consonant
+			let vowelToInsert = null;
+			
+			// Check if we have exactly 1 consonant and vowels appeared before it
+			if (consonantCount === 1) {
+				// Get vowels from the original word between first char and the consonant position
+				const consonantPos = word.indexOf(abbr[1], 1);
+				const vowelsBefore = [];
+				for (let i = 1; i < consonantPos; i++) {
+					if ("aeiou".includes(word[i]) && word[i] !== word[i-1]) {
+						vowelsBefore.push(word[i]);
+					}
+				}
+				if (vowelsBefore.length > 0) {
+					vowelToInsert = vowelsBefore[vowelsBefore.length - 1];
+					// Insert before the consonant
+					abbr = abbr[0] + vowelToInsert + abbr[1];
+				}
+			}
+			
+			// If still not 3 chars, pad with remaining letters
+			if (abbr.length < 3) {
+				for (let i = 1; i < word.length && abbr.length < 3; i++) {
+					if (!abbr.includes(word[i])) {
+						abbr += word[i];
+					}
 				}
 			}
 		}
