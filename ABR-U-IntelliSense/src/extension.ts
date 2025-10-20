@@ -1,6 +1,7 @@
 import * as vscode from "vscode";
 import { AbrUCompletionProvider } from "./providers/completionProvider";
 import { AbrUHoverProvider } from "./providers/hoverProvider";
+import { ClassExplorerProvider } from "./providers/classExplorerProvider";
 import { initLogger } from "./logger";
 
 export function activate(context: vscode.ExtensionContext) {
@@ -12,15 +13,32 @@ export function activate(context: vscode.ExtensionContext) {
 	initLogger(outputChannel);
 
 	try {
-		// Create status bar item
+		// Initialize class explorer with output channel for debugging
+		const classExplorer = new ClassExplorerProvider(outputChannel);
+
+		// Create status bar item with command
 		const statusBarItem = vscode.window.createStatusBarItem(
 			vscode.StatusBarAlignment.Right,
 			100
 		);
 		statusBarItem.text = "$(check) ABR-U";
-		statusBarItem.tooltip = "ABR-U IntelliSense is running";
+		statusBarItem.tooltip =
+			"ABR-U IntelliSense is running\n\nClick to open Class Explorer";
+		statusBarItem.command = "abr-u-intellisense.showClassExplorer";
 		statusBarItem.show();
 		context.subscriptions.push(statusBarItem);
+
+		// Register class explorer command
+		const classExplorerCommand = vscode.commands.registerCommand(
+			"abr-u-intellisense.showClassExplorer",
+			() => {
+				outputChannel.appendLine(
+					`[Extension] Class Explorer command triggered`
+				);
+				classExplorer.show();
+			}
+		);
+		context.subscriptions.push(classExplorerCommand);
 
 		// Register test command
 		const testCommand = vscode.commands.registerCommand(

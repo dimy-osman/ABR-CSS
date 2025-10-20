@@ -2,7 +2,7 @@
 	"name": "abr-u-intellisense",
 	"displayName": "ABR-U CSS IntelliSense",
 	"description": "Intelligent autocomplete and hover documentation for ABR-U CSS utility classes. Select multiple classes to preview combined CSS!",
-	"version": "1.6.5",
+	"version": "1.8.4",
 	"publisher": "dimy-osman",
 	"license": "MIT",
 	"icon": "icon.png",
@@ -33,6 +33,18 @@
 			{
 				"command": "abr-u-intellisense.test",
 				"title": "ABR-U: Test Extension"
+			},
+			{
+				"command": "abr-u-intellisense.showClassExplorer",
+				"title": "ABR-U: Show Class Explorer"
+			}
+		],
+		"keybindings": [
+			{
+				"command": "abr-u-intellisense.showClassExplorer",
+				"key": "ctrl+alt+shift+a",
+				"mac": "cmd+alt+shift+a",
+				"when": "editorTextFocus"
 			}
 		],
 		"configuration": {
@@ -58,7 +70,11 @@
 		"compile": "tsc -p .",
 		"watch": "tsc -watch -p .",
 		"generate": "node scripts/generateClassData.js",
-		"build": "npm run generate && npm run compile"
+		"build": "npm run generate && npm run compile",
+		"package": "npx --yes @vscode/vsce package",
+		"publish:vscode": "pwsh -Command \"$token = Get-Content secrets/vsce_pat.txt -Raw; $token = $token.Trim(); npx --yes @vscode/vsce publish -p $token\"",
+		"publish:openvsx": "pwsh -Command \"$token = Get-Content secrets/ovsx_pat.txt -Raw; $token = $token.Trim(); npx --yes ovsx publish abr-u-intellisense-$(node -p \\\"require('./package.json').version\\\").vsix -p $token\"",
+		"publish:all": "npm run publish:vscode && npm run publish:openvsx"
 	},
 	"devDependencies": {
 		"@types/node": "^20.5.0",

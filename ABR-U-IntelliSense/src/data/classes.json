@@ -1,16 +1,4 @@
 {
-  "5": {
-    "css": "opacity: 0.5;",
-    "description": "opacity: 0.5"
-  },
-  "25": {
-    "css": "opacity: 0.25;",
-    "description": "opacity: 0.25"
-  },
-  "75": {
-    "css": "opacity: 0.75;",
-    "description": "opacity: 0.75"
-  },
   "ac-c": {
     "css": "align-content: center;",
     "description": "align-content: center"

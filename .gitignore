@@ -10,6 +10,10 @@ out/
 dist/
 ABR-C/
 
+# Local scripts not tracked in git
+scripts/generate-named-colors.mjs
+scripts/minify-css.mjs
+
 # OS files
 .DS_Store
 Thumbs.db
@@ -17,4 +21,14 @@ Thumbs.db
 # IDE
 .vscode/
 .idea/
+
+# Local secrets/env files (do not commit tokens)
+.env
+.env.local
+.env.*
+*.env
+.envrc
+.secrets/
+secrets/
+tokens/
 

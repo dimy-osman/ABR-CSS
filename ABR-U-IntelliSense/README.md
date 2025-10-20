@@ -33,7 +33,9 @@ CSS previews.
   - Properties in light blue
   - Values in white
   - Clean monospace formatting
-- **Direct documentation link** - Quick access to GitHub docs via the arrow icon
+- **Quick access links**:
+  - 🔍 **Class Explorer** - Opens searchable popup with all ABR-U classes
+  - **GIT↗** - Direct link to GitHub documentation
 
 ### Multi-Class Selection
 
@@ -58,6 +60,16 @@ display: flex;
 justify-content: center;
 align-items: center;
 ```
+
+### Class Explorer
+
+- **Searchable popup** with all ABR-U classes and their CSS properties
+- **Quick access**:
+  - Click the ABR-U status bar item
+  - Use keyboard shortcut: `Ctrl+Alt+Shift+A` (Windows/Linux) or `Cmd+Alt+Shift+A` (Mac)
+  - Click "🔍 Class Explorer" link in hover tooltips
+- **Instant copy** - Press Enter or click any class to copy it to clipboard
+- **Status bar feedback** - Shows "✓ Copied: class-name" for 5 seconds
 
 ### Configurable Behavior
 
@@ -102,6 +114,16 @@ Works seamlessly across:
    - Select multiple class names (e.g., `d-f jc-c ai-c`)
    - Hover over the selection
    - See combined CSS for all selected classes
+
+#### Class Explorer
+
+1. **Open the Class Explorer**:
+   - Click the ABR-U icon in the status bar (bottom right)
+   - Or press `Ctrl+Alt+Shift+A` (Windows/Linux) or `Cmd+Alt+Shift+A` (Mac)
+   - Or click "🔍 Class Explorer" in any hover tooltip
+2. **Search** for classes by typing (e.g., "bc-", "fw-", "pt-")
+3. **Copy** - Press Enter or click to copy class name to clipboard
+4. **Quick feedback** - Status bar shows "✓ Copied: class-name" for 5 seconds
 
 #### Configuration
 
@@ -169,6 +191,12 @@ The extension consists of three main components:
    - Formats CSS with syntax highlighting using VS Code's MarkdownString API
    - Respects user's hover mode configuration
 
+4. **Class Explorer** (`src/providers/classExplorerProvider.ts`)
+   - Implements VS Code's QuickPick API for searchable class list
+   - Provides instant class lookup and copy functionality
+   - Shows temporary status bar notifications on copy
+   - Accessible via status bar, keyboard shortcut, or hover tooltip link
+
 ### Technical Details
 
 - **Language Support**: Registered for HTML, JS, TS, JSX, TSX file types
@@ -220,6 +248,7 @@ abr-u-intellisense/
     providers/
       completionProvider.ts   # Autocomplete logic
       hoverProvider.ts        # Hover tooltip logic
+      classExplorerProvider.ts # Class Explorer popup
   scripts/
     generateClassData.js      # Class data extraction script
   out/                        # Compiled JavaScript output
@@ -251,6 +280,12 @@ For complete ABR-U CSS documentation, class reference, and examples:
 | ------------------------------ | -------- | --------------- | ------------------------------------------------------------------------- |
 | `abr-u-intellisense.hoverMode` | `string` | `selectionOnly` | Controls when hover tooltips appear. Options: `always` or `selectionOnly` |
 
+## Keyboard Shortcuts
+
+| Command                 | Default Shortcut (Windows/Linux) | Default Shortcut (Mac)    | Description                           |
+| ----------------------- | -------------------------------- | ------------------------- | ------------------------------------- |
+| Show Class Explorer     | `Ctrl+Alt+Shift+A`               | `Cmd+Alt+Shift+A`         | Opens searchable popup with all classes |
+
 ---
 
 ## Troubleshooting
@@ -277,7 +312,18 @@ For complete ABR-U CSS documentation, class reference, and examples:
 
 ## Changelog
 
-### v1.6.0 (Current)
+### v1.8.3 (Current)
+
+- **NEW**: Class Explorer - Searchable popup for all ABR-U classes
+  - Accessible via status bar click or `Ctrl+Alt+Shift+A` keyboard shortcut
+  - Quick copy to clipboard with instant status bar feedback
+  - Integrated link in hover tooltips
+- Enhanced hover tooltip layout with improved spacing and dividers
+- Clickable status bar item for quick access to Class Explorer
+- Temporary status bar notifications (5 seconds) when copying classes
+- Updated documentation with Class Explorer usage guide
+
+### v1.6.0
 
 - Fixed autocomplete to only show breakpoint variants when @ is typed
 - Fixed README examples to use real ABR-U class names

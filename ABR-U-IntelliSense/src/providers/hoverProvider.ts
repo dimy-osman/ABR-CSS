@@ -54,16 +54,26 @@ export class AbrUHoverProvider implements vscode.HoverProvider {
 							} selected\n\n`
 						);
 
-						// Selected classes
+						// Selected classes (with orange background)
 						const classNames = abrClasses.map((c) => c.name).join(" ");
-						markdown.appendMarkdown(`\`${classNames}\`\n\n`);
-
-						// Link icon
 						markdown.appendMarkdown(
-							`<div style="text-align:right;margin-top:-30px;"><a href="https://github.com/dimy-osman/ABR-CSS" style="color:#2563eb;text-decoration:none;font-size:16px;" title="View Documentation">↗</a></div>\n\n`
+							`<code style="background-color:#ff8c00;color:#000;padding:4px 8px;border-radius:4px;">${classNames}</code>\n\n`
 						);
 
-						markdown.appendMarkdown(`---\n\n`); // Separator before CSS
+						// Divider with margin
+						markdown.appendMarkdown(
+							`<hr style="margin:8px 0;border:none;border-top:1px solid #444;">\n\n`
+						);
+
+						// Links: Class Explorer (left) with spacing | GIT (right)
+						markdown.appendMarkdown(
+							`<div style="font-size:11px;margin:6px 0;"><a href="command:abr-u-intellisense.showClassExplorer" style="color:#ffffff;text-decoration:none;" title="Open Class Explorer">🔍 Class Explorer</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#666;">|</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/dimy-osman/ABR-CSS" style="color:#ffffff;text-decoration:none;" title="View Documentation">GIT↗</a></div>\n\n`
+						);
+
+						// Divider with margin
+						markdown.appendMarkdown(
+							`<hr style="margin:8px 0;border:none;border-top:1px solid #444;">\n\n`
+						);
 
 						// Format CSS with colors: properties in light blue, values in white
 						const formattedCSS = abrClasses
@@ -93,9 +103,11 @@ export class AbrUHoverProvider implements vscode.HoverProvider {
 							})
 							.join("<br/>");
 
+						markdown.appendMarkdown(`<br/>\n\n`);
 						markdown.appendMarkdown(
-							`\n\n<div style="font-family:Consolas,Monaco,monospace;font-size:12px;line-height:1.5;">${formattedCSS}</div>\n\n`
+							`<div style="font-family:Consolas,Monaco,monospace;font-size:12px;line-height:1.5;">${formattedCSS}</div>\n\n`
 						);
+						markdown.appendMarkdown(`<br/>\n\n`);
 
 						markdown.isTrusted = true;
 						markdown.supportHtml = true;
@@ -131,15 +143,25 @@ export class AbrUHoverProvider implements vscode.HoverProvider {
 			// Title
 			markdown.appendMarkdown(`**ABR-U:** 1 class selected\n\n`);
 
-			// Selected class
-			markdown.appendMarkdown(`\`${hoveredWord}\`\n\n`);
-
-			// Link icon
+			// Selected class (with orange background)
 			markdown.appendMarkdown(
-				`<div style="text-align:right;margin-top:-30px;"><a href="https://github.com/dimy-osman/ABR-CSS" style="color:#2563eb;text-decoration:none;font-size:16px;" title="View Documentation">↗</a></div>\n\n`
+				`<code style="background-color:#ff8c00;color:#000;padding:4px 8px;border-radius:4px;">${hoveredWord}</code>\n\n`
 			);
 
-			markdown.appendMarkdown(`---\n\n`); // Separator before CSS
+			// Divider with margin
+			markdown.appendMarkdown(
+				`<hr style="margin:8px 0;border:none;border-top:1px solid #444;">\n\n`
+			);
+
+			// Links: Class Explorer (left) with spacing | GIT (right)
+			markdown.appendMarkdown(
+				`<div style="font-size:11px;margin:6px 0;"><a href="command:abr-u-intellisense.showClassExplorer" style="color:#ffffff;text-decoration:none;" title="Open Class Explorer">🔍 Class Explorer</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#666;">|</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/dimy-osman/ABR-CSS" style="color:#ffffff;text-decoration:none;" title="View Documentation">GIT↗</a></div>\n\n`
+			);
+
+			// Divider with margin
+			markdown.appendMarkdown(
+				`<hr style="margin:8px 0;border:none;border-top:1px solid #444;">\n\n`
+			);
 
 			// Format CSS with colors
 			const formattedCSS = data.css
@@ -159,9 +181,11 @@ export class AbrUHoverProvider implements vscode.HoverProvider {
 				})
 				.join("<br/>");
 
+			markdown.appendMarkdown(`<br/>\n\n`);
 			markdown.appendMarkdown(
-				`\n\n<div style="font-family:Consolas,Monaco,monospace;font-size:12px;line-height:1.5;">${formattedCSS}</div>\n\n`
+				`<div style="font-family:Consolas,Monaco,monospace;font-size:12px;line-height:1.5;">${formattedCSS}</div>\n\n`
 			);
+			markdown.appendMarkdown(`<br/>\n\n`);
 
 			markdown.isTrusted = true;
 			markdown.supportHtml = true;

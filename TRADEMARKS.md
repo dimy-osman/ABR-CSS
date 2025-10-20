@@ -1,7 +1,7 @@
 # Trademarks
 
-The names and marks below, along with the associated logos and brand assets,
-are trademarks of Osman (dimy-osman):
+The names and marks below, along with the associated logos and brand assets, are
+trademarks of Osman (dimy-osman):
 
 - ABR
 - ABR CSS

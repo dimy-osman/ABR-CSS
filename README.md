@@ -70,6 +70,25 @@ ABR.CSS is built for **speed**, **clarity**, and **minimalism** — not bloated 
 Comprehensive utility classes for all CSS properties with responsive
 breakpoints.
 
+**🔌 VS Code / Cursor Extension Available!**
+
+[![VS Code Marketplace](https://img.shields.io/visual-studio-marketplace/v/dimy-osman.abr-u-intellisense?label=VS%20Code&color=blue)](https://marketplace.visualstudio.com/items?itemName=dimy-osman.abr-u-intellisense)
+[![Open VSX](https://img.shields.io/badge/Open%20VSX-1.8.4-purple)](https://open-vsx.org/extension/dimy-osman/abr-u-intellisense)
+
+Get intelligent autocomplete, hover documentation, and a searchable class explorer for ABR-U CSS. Features include:
+
+- **Intelligent autocomplete** - Context-aware suggestions in `class` attributes
+- **Multi-class hover tooltips** - Select multiple classes to see combined CSS
+- **Class Explorer** - Searchable popup with all ABR-U classes (`Ctrl+Alt+Shift+A`)
+- **Instant copy** - Copy any class to clipboard with status bar feedback
+- **Framework support** - Works in HTML, JSX, TSX, Vue, and more
+
+📖 **[Full Extension Documentation](abr-u-intellisense/README.md)**
+
+**Install:**
+- **VS Code:** Search "ABR-U IntelliSense" in Extensions or [install from marketplace](https://marketplace.visualstudio.com/items?itemName=dimy-osman.abr-u-intellisense)
+- **Cursor:** Search "ABR-U IntelliSense" in Extensions or [install from Open VSX](https://open-vsx.org/extension/dimy-osman/abr-u-intellisense)
+
 **CDN (Always Latest):**
 
 ```html
@@ -395,7 +414,7 @@ git push && git push --tags
 - [x] ABR-U — Utility classes
 - [x] CDN via jsDelivr
 - [x] Responsive breakpoints (xs, s, m, l, xl)
-- [x] VS Code extension (autocomplete)
+- [x] VS Code / Cursor IntelliSense extension with Class Explorer
 - [x] Framework integrations (React, Vue, Svelte)
 - [ ] ABR-C — Component library
 - [ ] Interactive docs site
