@@ -83,7 +83,7 @@ Get intelligent autocomplete, hover documentation, and a searchable class explor
 - **Instant copy** - Copy any class to clipboard with status bar feedback
 - **Framework support** - Works in HTML, JSX, TSX, Vue, and more
 
-📖 **[Full Extension Documentation](abr-u-intellisense/README.md)**
+📖 **[Full Extension Documentation](ABR-U-IntelliSense/README.md)**
 
 **Install:**
 - **VS Code:** Search "ABR-U IntelliSense" in Extensions or [install from marketplace](https://marketplace.visualstudio.com/items?itemName=dimy-osman.abr-u-intellisense)
