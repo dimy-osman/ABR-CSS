@@ -75,14 +75,14 @@ function abbreviate(color) {
 		if (abbr.length < 3) {
 			// Try to get vowels that appeared between L1 and the last consonant
 			let vowelToInsert = null;
-			
+
 			// Check if we have exactly 1 consonant and vowels appeared before it
 			if (consonantCount === 1) {
 				// Get vowels from the original word between first char and the consonant position
 				const consonantPos = word.indexOf(abbr[1], 1);
 				const vowelsBefore = [];
 				for (let i = 1; i < consonantPos; i++) {
-					if ("aeiou".includes(word[i]) && word[i] !== word[i-1]) {
+					if ("aeiou".includes(word[i]) && word[i] !== word[i - 1]) {
 						vowelsBefore.push(word[i]);
 					}
 				}
@@ -92,7 +92,7 @@ function abbreviate(color) {
 					abbr = abbr[0] + vowelToInsert + abbr[1];
 				}
 			}
-			
+
 			// If still not 3 chars, pad with remaining letters
 			if (abbr.length < 3) {
 				for (let i = 1; i < word.length && abbr.length < 3; i++) {
