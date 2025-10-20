@@ -2,7 +2,7 @@
 	"name": "abr-u-intellisense",
 	"displayName": "ABR-U CSS IntelliSense",
 	"description": "Intelligent autocomplete and hover documentation for ABR-U CSS utility classes. Select multiple classes to preview combined CSS!",
-	"version": "1.6.4",
+	"version": "1.6.5",
 	"publisher": "dimy-osman",
 	"license": "MIT",
 	"icon": "icon.png",

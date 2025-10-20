@@ -190,3 +190,91 @@ consistency.
 - Complete utility coverage for all CSS properties
 - Zero duplicate classes across all breakpoints
 - Organized into 5 consolidated responsive media query blocks
+- **Named CSS colors** for common base colors (22 colors)
+- **Extended viewport units** with common percentage values
+
+## Named CSS Colors
+
+ABR-U includes simplified named color classes for 22 common base colors (no light/dark/medium variants). Each color is available for three properties:
+
+- `.bc-{color}` - background-color
+- `.c-{color}` - color (text color)
+- `.brdc-{color}` - border-color
+
+### Available Colors:
+
+| Color | Abbreviation | Example Classes |
+|-------|--------------|-----------------|
+| black | `blc` | `bc-blc`, `c-blc`, `brdc-blc` |
+| blue | `blu` | `bc-blu`, `c-blu`, `brdc-blu` |
+| brown | `brw` | `bc-brw`, `c-brw`, `brdc-brw` |
+| cyan | `cyn` | `bc-cyn`, `c-cyn`, `brdc-cyn` |
+| gold | `gld` | `bc-gld`, `c-gld`, `brdc-gld` |
+| gray | `gry` | `bc-gry`, `c-gry`, `brdc-gry` |
+| green | `grn` | `bc-grn`, `c-grn`, `brdc-grn` |
+| khaki | `khk` | `bc-khk`, `c-khk`, `brdc-khk` |
+| magenta | `mgn` | `bc-mgn`, `c-mgn`, `brdc-mgn` |
+| orange | `orn` | `bc-orn`, `c-orn`, `brdc-orn` |
+| orchid | `orc` | `bc-orc`, `c-orc`, `brdc-orc` |
+| pink | `pnk` | `bc-pnk`, `c-pnk`, `brdc-pnk` |
+| purple | `prp` | `bc-prp`, `c-prp`, `brdc-prp` |
+| red | `red` | `bc-red`, `c-red`, `brdc-red` |
+| salmon | `slm` | `bc-slm`, `c-slm`, `brdc-slm` |
+| silver | `slv` | `bc-slv`, `c-slv`, `brdc-slv` |
+| tan | `tan` | `bc-tan`, `c-tan`, `brdc-tan` |
+| teal | `tal` | `bc-tal`, `c-tal`, `brdc-tal` |
+| turquoise | `trq` | `bc-trq`, `c-trq`, `brdc-trq` |
+| violet | `vlt` | `bc-vlt`, `c-vlt`, `brdc-vlt` |
+| white | `wht` | `bc-wht`, `c-wht`, `brdc-wht` |
+| yellow | `ylw` | `bc-ylw`, `c-ylw`, `brdc-ylw` |
+
+**Example:**
+```html
+<div class="bc-blu c-wht p-2">Blue background with white text</div>
+<button class="bc-grn c-wht brdc-grn p-1">Green button</button>
+```
+
+## Viewport Unit Classes
+
+ABR-U provides viewport unit classes with the same common percentage breakpoints for easy responsive sizing:
+
+### Height Classes (`h-`)
+
+Available for `dvh` (dynamic viewport height) and `vh` (viewport height):
+
+- `h-17dvh`, `h-17vh` - 17% of viewport height
+- `h-20dvh`, `h-20vh` - 20% of viewport height
+- `h-25dvh`, `h-25vh` - 25% of viewport height
+- `h-33dvh`, `h-33vh` - 33% of viewport height
+- `h-40dvh`, `h-40vh` - 40% of viewport height
+- `h-50dvh`, `h-50vh` - 50% of viewport height
+- `h-60dvh`, `h-60vh` - 60% of viewport height
+- `h-67dvh`, `h-67vh` - 67% of viewport height
+- `h-75dvh`, `h-75vh` - 75% of viewport height
+- `h-80dvh`, `h-80vh` - 80% of viewport height
+- `h-100dvh`, `h-100vh` - 100% of viewport height
+
+### Width Classes (`w-`)
+
+Available for `dvw` (dynamic viewport width) and `vw` (viewport width):
+
+- `w-17dvw`, `w-17vw` - 17% of viewport width
+- `w-20dvw`, `w-20vw` - 20% of viewport width
+- `w-25dvw`, `w-25vw` - 25% of viewport width
+- `w-33dvw`, `w-33vw` - 33% of viewport width
+- `w-40dvw`, `w-40vw` - 40% of viewport width
+- `w-50dvw`, `w-50vw` - 50% of viewport width
+- `w-60dvw`, `w-60vw` - 60% of viewport width
+- `w-67dvw`, `w-67vw` - 67% of viewport width
+- `w-75dvw`, `w-75vw` - 75% of viewport width
+- `w-80dvw`, `w-80vw` - 80% of viewport width
+- `w-100dvw`, `w-100vw` - 100% of viewport width
+
+**Example:**
+```html
+<section class="h-100dvh w-100dvw">Full viewport section</section>
+<div class="h-50vh w-75vw">Half height, three-quarter width</div>
+<hero class="h-100dvh d-f ai-c jc-c">Full height hero section</hero>
+```
+
+**Note:** All viewport classes include `!important` variants (e.g., `h-100dvh\!`, `w-50vw\!`)

@@ -1,7 +1,10 @@
 const fs = require('fs');
 const path = require('path');
 
-const inputCssPath = path.resolve(__dirname, '../../ABR-U/ABR-U.css');
+const inputCssPaths = [
+  path.resolve(__dirname, '../../ABR-U/ABR-U.css'),
+  path.resolve(__dirname, '../../ABR-U/colors-named.css')
+];
 const outJsonPath = path.resolve(__dirname, '../src/data/classes.json');
 
 // Breakpoint mappings
@@ -13,7 +16,7 @@ const breakpoints = {
   'xl': '1921px'
 };
 
-const css = fs.readFileSync(inputCssPath, 'utf8');
+const css = inputCssPaths.filter(p => fs.existsSync(p)).map(p => fs.readFileSync(p, 'utf8')).join('\n');
 const classRegex = /\.([a-z0-9_\-@\\%!]+)\s*\{([^}]+)\}/gi;
 
 const classes = {};

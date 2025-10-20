@@ -1,7 +1,10 @@
-import { readFileSync, writeFileSync, mkdirSync } from "fs";
+import { readFileSync, writeFileSync, mkdirSync, existsSync } from "fs";
 import { execSync } from "child_process";
 
-const SOURCE = "ABR-U/ABR-U.css";
+const SOURCES = [
+	"ABR-U/ABR-U.css",
+	"ABR-U/colors-named.css", // generated file with CSS named colors
+].filter((p) => existsSync(p));
 const OUT_MIN = "ABR-U/ABR-U.min.css";
 
 function deriveVersion() {
@@ -38,14 +41,14 @@ function formatLocalTimestamp() {
 function minifyCss() {
 	const banner = `/*! ABR-U.min.css | ${deriveVersion()} | ${formatLocalTimestamp()} */`;
 	// Use clean-css-cli via npx
-	const cmd = `npx --yes cleancss -O2 ${SOURCE}`;
+	const cmd = `npx --yes cleancss -O2 ${SOURCES.join(" ")}`;
 	const min = execSync(cmd, { encoding: "utf8" });
 	if (!min || typeof min !== "string") {
 		console.error("Minification failed");
 		process.exit(1);
 	}
 	writeFileSync(OUT_MIN, `${banner}\n${min}`, { encoding: "utf8" });
-	console.log(`Minified ${SOURCE} -> ${OUT_MIN}`);
+	console.log(`Minified ${SOURCES.join(", ")} -> ${OUT_MIN}`);
 }
 
 minifyCss();
