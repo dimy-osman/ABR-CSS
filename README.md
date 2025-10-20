@@ -80,9 +80,9 @@ breakpoints.
 **CDN (Version Pinned - Recommended for Production):**
 
 ```html
-<!-- v0.2.0 - Current stable -->
+<!-- v0.3.0 - Current stable (Named colors + Viewport units) -->
 <link rel="stylesheet" 
-  href="https://cdn.jsdelivr.net/gh/dimy-osman/ABR-CSS@v0.2.0/ABR-U/ABR-U.min.css" />
+  href="https://cdn.jsdelivr.net/gh/dimy-osman/ABR-CSS@v0.3.0/ABR-U/ABR-U.min.css" />
 ```
 
 > 💡 **Tip:** Pin to a specific version in production to avoid breaking changes.
@@ -128,18 +128,35 @@ Pre-built, accessible components following ABR naming conventions.
 
 ```html
 <!DOCTYPE html>
-<html>
-	<head>
-		<link
-			rel="stylesheet"
-			href="https://cdn.jsdelivr.net/gh/dimy-osman/ABR-CSS@latest/ABR-U/ABR-U.min.css" />
-	</head>
-	<body>
-		<div class="d-f jc-c ai-c h-100vh">
-			<h1 class="fs-3xl fw-700 c-blu500">Hello ABR-CSS!</h1>
-		</div>
-	</body>
-</html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ABR-CSS App</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/dimy-osman/ABR-CSS@v0.3.0/ABR-U/ABR-U.min.css" />
+  </head>
+  <body class="bc-slt300 ff-s fs-l">
+    <header class="d-f jc-sb ai-c pX-l pY-s bc-slt50 shd-sm brdr-s pst-stc t-s">
+      <h1 class="fs-xl fw-700">My App</h1>
+      <nav class="d-f g-m bc-orn100 brdr-s">
+        <a href="#" class="pt-s pr-m pb-s pl-m c-gry950 fw-500 td-n">Home</a>
+        <a href="#" class="pt-s pr-m pb-s pl-m c-gry950 fw-500 td-n">About</a>
+      </nav>
+    </header>
+
+    <main class="d-f jc-c ai-c h-100vh">
+      <div class="d-f fd-c jc-c ai-c g-m ta-c bc-slt200 w-80% pY-3xl pX-xl brdr-s">
+        <h2 class="fs-5xl fw-700 mY-0">Welcome to ABR-CSS</h2>
+        <p class="fs-xl c-gry600 mY-0">Ultra-minimal, AI-optimized utility CSS</p>
+        <button class="pt-m pr-l pb-m pl-l bc-orn200 fw-600 brds-n brdr-s crs-p w-fc fs-l">
+          Get Started
+        </button>
+      </div>
+    </main>
+  </body>
+  </html>
 ```
 
 ---
