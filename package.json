@@ -1,0 +1,20 @@
+{
+	"name": "abr-css",
+	"version": "1.0.0",
+	"description": "[![GitHub release](https://img.shields.io/github/v/release/dimy-osman/ABR-CSS?sort=semver&display_name=tag)](https://github.com/dimy-osman/ABR-CSS/releases)\r [![License](https://img.shields.io/badge/license-Polyform%20Shield-blue)](LICENSE)",
+	"main": "index.js",
+	"scripts": {
+		"minify": "node scripts/minify-css.mjs",
+		"watch": "chokidar \"ABR-U/ABR-U.css\" -c \"npm run minify\" --initial --await-write-finish 200 --verbose",
+		"watch:poll": "chokidar \"ABR-U/ABR-U.css\" -c \"npm run minify\" --initial --await-write-finish 200 --usePolling --interval 300 --verbose",
+		"build": "npm run minify"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"chokidar-cli": "^3.0.0",
+		"clean-css-cli": "^5.6.3",
+		"dayjs": "^1.11.18"
+	}
+}
