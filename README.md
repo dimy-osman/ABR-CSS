@@ -218,7 +218,7 @@ Add to your theme's `functions.php`:
 function abr_css_enqueue() {
     wp_enqueue_style(
         'abr-css',
-        'https://cdn.jsdelivr.net/gh/dimy-osman/ABR-CSS@v0.2.0/ABR-U/ABR-U.min.css',
+        'https://cdn.jsdelivr.net/gh/dimy-osman/ABR-CSS@v0.3.0/ABR-U/ABR-U.min.css',
         array(),
         '0.2.0'
     );
@@ -239,7 +239,7 @@ export default function App({ Component, pageProps }) {
       <Head>
         <link
           rel="stylesheet"
-          href="https://cdn.jsdelivr.net/gh/dimy-osman/ABR-CSS@v0.2.0/ABR-U/ABR-U.min.css"
+          href="https://cdn.jsdelivr.net/gh/dimy-osman/ABR-CSS@v0.3.0/ABR-U/ABR-U.min.css"
         />
       </Head>
       <Component {...pageProps} />
@@ -252,7 +252,7 @@ export default function App({ Component, pageProps }) {
 
 ```html
 <link rel="stylesheet" 
-  href="https://cdn.jsdelivr.net/gh/dimy-osman/ABR-CSS@v0.2.0/ABR-U/ABR-U.min.css" />
+  href="https://cdn.jsdelivr.net/gh/dimy-osman/ABR-CSS@v0.3.0/ABR-U/ABR-U.min.css" />
 ```
 
 ### Vue 3 / Nuxt 3
@@ -266,7 +266,7 @@ export default defineNuxtConfig({
       link: [
         {
           rel: 'stylesheet',
-          href: 'https://cdn.jsdelivr.net/gh/dimy-osman/ABR-CSS@v0.2.0/ABR-U/ABR-U.min.css'
+          href: 'https://cdn.jsdelivr.net/gh/dimy-osman/ABR-CSS@v0.3.0/ABR-U/ABR-U.min.css'
         }
       ]
     }
@@ -284,7 +284,7 @@ useHead({
   link: [
     {
       rel: 'stylesheet',
-      href: 'https://cdn.jsdelivr.net/gh/dimy-osman/ABR-CSS@v0.2.0/ABR-U/ABR-U.min.css'
+      href: 'https://cdn.jsdelivr.net/gh/dimy-osman/ABR-CSS@v0.3.0/ABR-U/ABR-U.min.css'
     }
   ]
 });
@@ -298,7 +298,7 @@ useHead({
 ```html
 <head>
   <link rel="stylesheet" 
-    href="https://cdn.jsdelivr.net/gh/dimy-osman/ABR-CSS@v0.2.0/ABR-U/ABR-U.min.css" />
+    href="https://cdn.jsdelivr.net/gh/dimy-osman/ABR-CSS@v0.3.0/ABR-U/ABR-U.min.css" />
 </head>
 ```
 
@@ -313,7 +313,7 @@ useHead({
 <html>
   <head>
     <link rel="stylesheet" 
-      href="https://cdn.jsdelivr.net/gh/dimy-osman/ABR-CSS@v0.2.0/ABR-U/ABR-U.min.css" />
+      href="https://cdn.jsdelivr.net/gh/dimy-osman/ABR-CSS@v0.3.0/ABR-U/ABR-U.min.css" />
   </head>
   <body>
     <slot />
@@ -327,7 +327,7 @@ useHead({
 
 1. Go to **Project** → **Manage Libraries**
 2. Add **External Stylesheet**
-3. Paste URL: `https://cdn.jsdelivr.net/gh/dimy-osman/ABR-CSS@v0.2.0/ABR-U/ABR-U.min.css`
+3. Paste URL: `https://cdn.jsdelivr.net/gh/dimy-osman/ABR-CSS@v0.3.0/ABR-U/ABR-U.min.css`
 4. Enable for all pages or specific templates
 
 ### HTML Starter Template
