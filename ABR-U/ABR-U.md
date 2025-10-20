@@ -195,7 +195,8 @@ consistency.
 
 ## Named CSS Colors
 
-ABR-U includes simplified named color classes for 22 common base colors (no light/dark/medium variants). Each color is available for three properties:
+ABR-U includes simplified named color classes for 22 common base colors (no
+light/dark/medium variants). Each color is available for three properties:
 
 - `.bc-{color}` - background-color
 - `.c-{color}` - color (text color)
@@ -203,32 +204,33 @@ ABR-U includes simplified named color classes for 22 common base colors (no ligh
 
 ### Available Colors:
 
-| Color | Abbreviation | Example Classes |
-|-------|--------------|-----------------|
-| black | `blc` | `bc-blc`, `c-blc`, `brdc-blc` |
-| blue | `blu` | `bc-blu`, `c-blu`, `brdc-blu` |
-| brown | `brw` | `bc-brw`, `c-brw`, `brdc-brw` |
-| cyan | `cyn` | `bc-cyn`, `c-cyn`, `brdc-cyn` |
-| gold | `gld` | `bc-gld`, `c-gld`, `brdc-gld` |
-| gray | `gry` | `bc-gry`, `c-gry`, `brdc-gry` |
-| green | `grn` | `bc-grn`, `c-grn`, `brdc-grn` |
-| khaki | `khk` | `bc-khk`, `c-khk`, `brdc-khk` |
-| magenta | `mgn` | `bc-mgn`, `c-mgn`, `brdc-mgn` |
-| orange | `orn` | `bc-orn`, `c-orn`, `brdc-orn` |
-| orchid | `orc` | `bc-orc`, `c-orc`, `brdc-orc` |
-| pink | `pnk` | `bc-pnk`, `c-pnk`, `brdc-pnk` |
-| purple | `prp` | `bc-prp`, `c-prp`, `brdc-prp` |
-| red | `red` | `bc-red`, `c-red`, `brdc-red` |
-| salmon | `slm` | `bc-slm`, `c-slm`, `brdc-slm` |
-| silver | `slv` | `bc-slv`, `c-slv`, `brdc-slv` |
-| tan | `tan` | `bc-tan`, `c-tan`, `brdc-tan` |
-| teal | `tal` | `bc-tal`, `c-tal`, `brdc-tal` |
-| turquoise | `trq` | `bc-trq`, `c-trq`, `brdc-trq` |
-| violet | `vlt` | `bc-vlt`, `c-vlt`, `brdc-vlt` |
-| white | `wht` | `bc-wht`, `c-wht`, `brdc-wht` |
-| yellow | `ylw` | `bc-ylw`, `c-ylw`, `brdc-ylw` |
+| Color     | Abbreviation | Example Classes               |
+| --------- | ------------ | ----------------------------- |
+| black     | `blc`        | `bc-blc`, `c-blc`, `brdc-blc` |
+| blue      | `blu`        | `bc-blu`, `c-blu`, `brdc-blu` |
+| brown     | `brw`        | `bc-brw`, `c-brw`, `brdc-brw` |
+| cyan      | `cyn`        | `bc-cyn`, `c-cyn`, `brdc-cyn` |
+| gold      | `gld`        | `bc-gld`, `c-gld`, `brdc-gld` |
+| gray      | `gry`        | `bc-gry`, `c-gry`, `brdc-gry` |
+| green     | `grn`        | `bc-grn`, `c-grn`, `brdc-grn` |
+| khaki     | `khk`        | `bc-khk`, `c-khk`, `brdc-khk` |
+| magenta   | `mgn`        | `bc-mgn`, `c-mgn`, `brdc-mgn` |
+| orange    | `orn`        | `bc-orn`, `c-orn`, `brdc-orn` |
+| orchid    | `orc`        | `bc-orc`, `c-orc`, `brdc-orc` |
+| pink      | `pnk`        | `bc-pnk`, `c-pnk`, `brdc-pnk` |
+| purple    | `prp`        | `bc-prp`, `c-prp`, `brdc-prp` |
+| red       | `red`        | `bc-red`, `c-red`, `brdc-red` |
+| salmon    | `slm`        | `bc-slm`, `c-slm`, `brdc-slm` |
+| silver    | `slv`        | `bc-slv`, `c-slv`, `brdc-slv` |
+| tan       | `tan`        | `bc-tan`, `c-tan`, `brdc-tan` |
+| teal      | `tal`        | `bc-tal`, `c-tal`, `brdc-tal` |
+| turquoise | `trq`        | `bc-trq`, `c-trq`, `brdc-trq` |
+| violet    | `vlt`        | `bc-vlt`, `c-vlt`, `brdc-vlt` |
+| white     | `wht`        | `bc-wht`, `c-wht`, `brdc-wht` |
+| yellow    | `ylw`        | `bc-ylw`, `c-ylw`, `brdc-ylw` |
 
 **Example:**
+
 ```html
 <div class="bc-blu c-wht p-2">Blue background with white text</div>
 <button class="bc-grn c-wht brdc-grn p-1">Green button</button>
@@ -236,7 +238,8 @@ ABR-U includes simplified named color classes for 22 common base colors (no ligh
 
 ## Viewport Unit Classes
 
-ABR-U provides viewport unit classes with the same common percentage breakpoints for easy responsive sizing:
+ABR-U provides viewport unit classes with the same common percentage breakpoints
+for easy responsive sizing:
 
 ### Height Classes (`h-`)
 
@@ -271,10 +274,12 @@ Available for `dvw` (dynamic viewport width) and `vw` (viewport width):
 - `w-100dvw`, `w-100vw` - 100% of viewport width
 
 **Example:**
+
 ```html
 <section class="h-100dvh w-100dvw">Full viewport section</section>
 <div class="h-50vh w-75vw">Half height, three-quarter width</div>
 <hero class="h-100dvh d-f ai-c jc-c">Full height hero section</hero>
 ```
 
-**Note:** All viewport classes include `!important` variants (e.g., `h-100dvh\!`, `w-50vw\!`)
+**Note:** All viewport classes include `!important` variants (e.g.,
+`h-100dvh\!`, `w-50vw\!`)

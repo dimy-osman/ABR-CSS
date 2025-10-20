@@ -35,15 +35,6 @@ const outPath = resolve("ABR-U/colors-named.css");
 function abbreviate(color) {
 	const lower = color.toLowerCase();
 
-	// Special case overrides
-	const overrides = {
-		teal: "tal",
-	};
-
-	if (overrides[lower]) {
-		return overrides[lower];
-	}
-
 	// If 3 letters or less, return as-is (ABR-U rule)
 	if (lower.length <= 3) {
 		return lower;
@@ -56,6 +47,7 @@ function abbreviate(color) {
 		let abbr = word[0]; // First letter always included
 		let consonantCount = 0;
 		let prevChar = word[0];
+		let lastVowelBeforeConsonant = null;
 
 		// Collect up to 2 more consonants (skip consecutive duplicates)
 		for (let i = 1; i < word.length && consonantCount < 2; i++) {
@@ -69,12 +61,21 @@ function abbreviate(color) {
 				consonantCount++;
 				prevChar = char;
 			} else {
+				// Track the last vowel we encounter before getting consonants
+				lastVowelBeforeConsonant = char;
 				prevChar = char;
 			}
 		}
 
-		// If we couldn't get 2 consonants, pad with remaining letters up to 3 total
-		if (abbr.length < 3) {
+		// If we have less than 3 chars and we tracked a vowel, insert it before the last consonant
+		// This handles cases like "teal" -> t + e(drop) + a(keep) + l -> "tal"
+		if (abbr.length < 3 && lastVowelBeforeConsonant && consonantCount > 0) {
+			// Insert the last vowel before the last consonant
+			const lastChar = abbr[abbr.length - 1];
+			abbr = abbr.slice(0, -1) + lastVowelBeforeConsonant + lastChar;
+		}
+		// If still not 3 chars, pad with remaining letters
+		else if (abbr.length < 3) {
 			for (let i = 1; i < word.length && abbr.length < 3; i++) {
 				if (!abbr.includes(word[i])) {
 					abbr += word[i];
