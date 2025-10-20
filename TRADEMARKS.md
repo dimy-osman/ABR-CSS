@@ -1,7 +1,15 @@
 # Trademarks
 
-The names "ABR", "ABR-U", "ABR CSS", and the associated logos and brand assets
-are trademarks of Osman (dimy-osman).
+The names and marks below, along with the associated logos and brand assets,
+are trademarks of Osman (dimy-osman):
+
+- ABR
+- ABR CSS
+- ABR.CSS
+- ABR-U
+- ABR-U.CSS
+- ABR-C
+- ABR-C.CSS
 
 You may use the names to refer to the project as long as your use does not imply
 sponsorship or endorsement by the trademark holder.
