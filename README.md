@@ -418,6 +418,103 @@ git push && git push --tags
 - [x] Framework integrations (React, Vue, Svelte)
 - [ ] ABR-C — Component library
 - [ ] Interactive docs site
+- [ ] Arbitrary value syntax (see [Future: Arbitrary Values](#future-arbitrary-values) below)
+
+---
+
+## Future: Arbitrary Values
+
+ABR-CSS will support arbitrary values for maximum flexibility while maintaining the abbreviated syntax. This system allows you to use any CSS value dynamically.
+
+### Syntax Overview
+
+**Prefixes:**
+- `@xs:`, `@s:`, `@m:`, `@l:`, `@xl:` — Responsive breakpoints
+- `&h:`, `&f:`, `&a:`, `&fv:` — State modifiers (hover, focus, active, focus-visible)
+- `~d:`, `~lt:` — Theme modifiers (dark, light)
+
+**Value Modes:**
+1. **Bracket mode** `[value]` — Single literal value
+2. **Paren mode** `(value with spaces)` — Multi-part values
+3. **Dash mode** `value-value` — Dash-separated values (auto rem conversion)
+
+### Parsing Logic
+
+```
+1. Match pattern: ^((?:[@&~][\w-]+:)*)[a-zA-Z]\w*-.+$
+2. Strip prefixes (@, &, ~)
+3. Check utility set → if found, use predefined utility
+4. Otherwise, parse as arbitrary:
+   - Starts with [ and ends with ] → Bracket mode
+   - Starts with ( and ends with ) → Paren mode
+   - Else → Dash mode (split on -, apply rules)
+```
+
+### Examples
+
+**Responsive padding:**
+```html
+<div class="@m:p-2-4"></div>
+```
+```css
+@media (min-width:1281px){
+  .\@m\:p-2-4{ padding:2rem 4rem; }
+}
+```
+
+**Hover background:**
+```html
+<div class="&h:bg-[#222]"></div>
+```
+```css
+.\&h\:bg-\[\#222\]:hover{ background:#222; }
+```
+
+**Dark theme color:**
+```html
+<div class="~d:c-[#eee]"></div>
+```
+```css
+.dark .\~d\:c-\[\#eee\]{ color:#eee; }
+```
+
+**Box shadow with spaces (paren mode):**
+```html
+<div class="sh-(0 6px 24px rgb(0 0 0 / 14%))"></div>
+```
+```css
+.sh-\(0_6px_24px_rgb\(0_0_0_\/14%\)\){ 
+  box-shadow: 0 6px 24px rgb(0 0 0 / 14%); 
+}
+```
+
+**Grid template columns (dash mode):**
+```html
+<div class="gtc-1fr-320px"></div>
+```
+```css
+.gtc-1fr-320px{ grid-template-columns:1fr 320px; }
+```
+
+**Combined modifiers:**
+```html
+<div class="@m:&h:sh-0-6px-24px-rgb(0_0_0_/14%)"></div>
+```
+```css
+@media (min-width:1281px){
+  .\@m\:\&h\:sh-0-6px-24px-rgb\(0_0_0_\/14%\):hover{
+    box-shadow:0 6px 24px rgb(0 0 0 / 14%);
+  }
+}
+```
+
+### Key Features
+
+- **Utilities first:** Predefined utilities always take precedence
+- **Zero ambiguity:** Deterministic parsing with clear rules
+- **CSS escaping:** Special characters (@, &, ~, :, [, ], (, ), #, %, /) are escaped in CSS selectors
+- **Smart defaults:** Dash mode auto-adds `rem` units to unitless numbers, scales appropriately
+- **Composable:** Prefix stacking (@m:&h:~d:) for complex responsive, stateful, themed styles
 
 
 ---
