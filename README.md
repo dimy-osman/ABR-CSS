@@ -516,6 +516,100 @@ ABR-CSS will support arbitrary values for maximum flexibility while maintaining 
 - **Smart defaults:** Dash mode auto-adds `rem` units to unitless numbers, scales appropriately
 - **Composable:** Prefix stacking (@m:&h:~d:) for complex responsive, stateful, themed styles
 
+---
+
+## Parser Options (Planned)
+
+To support arbitrary values, ABR-CSS will offer **two deployment modes**:
+
+### 1. Runtime Parser (CDN + JS) 🌐
+
+**For:** Prototyping, small projects, dynamic content  
+**Zero build step** - works anywhere, anytime.
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/abr-css@latest/abr-u.min.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Parser automatically injects generated styles here -->
+  <style id="abr-arbitrary">[generated CSS]</style>
+  
+  <div class="@m:p-2-4 &h:bg-[#222]">Content</div>
+  
+  <!-- Load parser at end of body -->
+  <script src="https://cdn.jsdelivr.net/npm/abr-css@latest/parser.min.js"></script>
+</body>
+</html>
+```
+
+**How it works:**
+1. Parser scans HTML for arbitrary ABR classes
+2. Generates CSS on-the-fly
+3. Injects `<style>` tag at top of `<body>` (before content)
+4. Updates dynamically as DOM changes
+
+**Pros:** Zero setup, instant prototyping  
+**Cons:** Runtime overhead, potential FOUC
+
+---
+
+### 2. Build-Time Parser (CLI/Node) ⚙️
+
+**For:** Production apps, framework projects (React, Vue, Svelte)  
+**Zero runtime JS** - pure static CSS output.
+
+**CLI Usage:**
+```bash
+# Scan source files and generate CSS
+npx abr-css build src/**/*.{html,jsx,tsx,vue,svelte} -o dist/abr-generated.css
+
+# Watch mode for development
+npx abr-css watch ./src -o ./public/abr-generated.css
+```
+
+**Node API:**
+```javascript
+const { parseABR } = require('abr-css/parser');
+
+const css = parseABR({
+  content: ['./src/**/*.{html,js,jsx,tsx,vue,svelte}'],
+  output: './dist/abr-generated.css'
+});
+```
+
+**How it works:**
+1. Scans source files during build
+2. Extracts arbitrary ABR classes
+3. Generates static CSS file
+4. No JavaScript in production
+
+**Pros:** Zero runtime cost, SSR-friendly, optimized  
+**Cons:** Requires build step
+
+---
+
+### Parser Architecture
+
+Both modes share the same core parsing logic:
+
+```
+abr-css/
+├── parser/
+│   ├── core.js           # Shared parsing logic
+│   ├── runtime.js        # Browser runtime parser
+│   ├── cli.js            # CLI tool
+│   └── node.js           # Node API
+├── dist/
+│   ├── parser.min.js     # CDN runtime (UMD)
+│   ├── parser.esm.js     # ESM for bundlers
+│   └── parser.cjs.js     # CommonJS for Node
+```
+
+**Progressive adoption:** Start with CDN runtime for prototyping, migrate to build-time parser for production.
+
 
 ---
 
