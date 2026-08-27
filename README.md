@@ -180,12 +180,11 @@ Pre-built, accessible components following ABR naming conventions.
 
 ---
 
-## Sponsor Development
+## Buy me coffee and AI tokens
 
-Support ABR.CSS — a lightweight CSS framework made for AI-assisted development.
-(for coffee and AI tokens)
+If ABR-CSS helps, you can [buy me coffee and AI tokens](https://www.paypal.com/ncp/payment/DQLKXFVPQCUG6).
 
-[![Sponsor Development!](https://img.shields.io/badge/Sponsor-ABR.CSS-FFD140?logo=paypal&logoColor=003087)](https://www.paypal.com/ncp/payment/MWHX2FHZ9RY8J)
+[![Buy me coffee and AI tokens](https://img.shields.io/badge/Buy%20me%20coffee%20and%20AI%20tokens-PayPal-FFD140?logo=paypal&logoColor=003087)](https://www.paypal.com/ncp/payment/DQLKXFVPQCUG6)
 
 Thank you!
 

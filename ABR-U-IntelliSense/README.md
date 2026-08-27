@@ -8,7 +8,7 @@ providing instant class suggestions, detailed hover tooltips, and multi-class
 CSS previews.
 
 [![GitHub](https://img.shields.io/badge/GitHub-ABR--CSS-blue?logo=github)](https://github.com/dimy-osman/ABR-CSS)
-[![Sponsor](https://img.shields.io/badge/Sponsor-ABR.CSS-FFD140?logo=paypal&logoColor=003087)](https://www.paypal.com/ncp/payment/MWHX2FHZ9RY8J)
+[![Buy me coffee and AI tokens](https://img.shields.io/badge/Buy%20me%20coffee%20and%20AI%20tokens-PayPal-FFD140?logo=paypal&logoColor=003087)](https://www.paypal.com/ncp/payment/DQLKXFVPQCUG6)
 
 ---
 
